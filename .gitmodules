@@ -4,3 +4,12 @@
 [submodule "llm_inference"]
 	path = llm_inference
 	url = https://github.com/ai-computing/llm_inference
+[submodule "netri-zero"]
+	path = netri-zero
+	url = https://github.com/ai-computing/netri-zero
+[submodule "rm_abstract_layer"]
+	path = rm_abstract_layer
+	url = https://github.com/ai-computing/rm_abstract_layer
+[submodule "rm_monitor"]
+	path = rm_monitor
+	url = https://github.com/ai-computing/rm_monitor
