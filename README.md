@@ -2,9 +2,15 @@
 
 **Status:** _Planning / Pre‑Alpha_. This repository describes and prepares a **resource management system (RMS) for AI accelerators**. It is **not yet feature‑complete** and **not ready for production**.
 
-This repo aggregates two building blocks as **Git submodules** (for future integration):
-- [llm_inference](https://github.com/ai-computing/llm_inference)
-- [furiosa-env-tools](https://github.com/ai-computing/furiosa-env-tools)
+This repo aggregates the following components as **Git submodules** (for future integration):
+
+| Submodule | Description |
+|-----------|-------------|
+| [llm_inference](https://github.com/ai-computing/llm_inference) | LLM inference engine for AI accelerators |
+| [furiosa-env-tools](https://github.com/ai-computing/furiosa-env-tools) | Environment and deployment tools |
+| [netri-zero](https://github.com/ai-computing/netri-zero) | Network interface for zero-copy data transfer |
+| [rm_abstract_layer](https://github.com/ai-computing/rm_abstract_layer) | Resource management abstraction layer |
+| [rm_monitor](https://github.com/ai-computing/rm_monitor) | Resource monitoring and telemetry service |
 
 > **Important:** The RMS layer that orchestrates scheduling, allocation, and monitoring is **under active design**. Interfaces, directory layout, and tooling **will change**.
 
@@ -62,10 +68,13 @@ cd <your-repo>
 git submodule update --init --recursive
 ```
 
-> Until the v0.1.0‑alpha milestone, the RMS code may be incomplete.  
+> Until the v0.1.0‑alpha milestone, the RMS code may be incomplete.
 > For now, please refer to the submodule READMEs for their independent usage:
-> - `llm_inference`: see its own README for build/run instructions.  
+> - `llm_inference`: see its own README for build/run instructions.
 > - `furiosa-env-tools`: see its own README for environment setup tips.
+> - `netri-zero`: see its own README for network interface configuration.
+> - `rm_abstract_layer`: see its own README for abstraction layer APIs.
+> - `rm_monitor`: see its own README for monitoring setup.
 
 ---
 
@@ -88,10 +97,13 @@ rmsctl job status <job-id>
 
 ```
 .
-├── llm_inference/           # Submodule (inference engine) — upstream maintained
-├── furiosa-env-tools/       # Submodule (env/deployment tools) — upstream maintained
+├── llm_inference/           # Submodule — LLM inference engine
+├── furiosa-env-tools/       # Submodule — Environment/deployment tools
+├── netri-zero/              # Submodule — Network interface (zero-copy)
+├── rm_abstract_layer/       # Submodule — Resource management abstraction
+├── rm_monitor/              # Submodule — Monitoring and telemetry
 ├── configs/                 # (planned) RMS configs and policies
-├── scripts/                 # (planned) helper scripts / dev tooling
+├── scripts/                 # (planned) Helper scripts / dev tooling
 ├── rms/                     # (planned) RMS core services & libs
 └── README.md
 ```
