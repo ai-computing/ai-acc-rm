@@ -1,12 +1,3 @@
-[submodule "furiosa-env-tools"]
-	path = furiosa-env-tools
-	url = https://github.com/ai-computing/furiosa-env-tools
-[submodule "rm_abstract_layer"]
-	path = rm_abstract_layer
-	url = https://github.com/ai-computing/rm_abstract_layer
 [submodule "rm_monitor"]
 	path = rm_monitor
 	url = https://github.com/ai-computing/rm_monitor
-[submodule "etri-zero"]
-	path = etri-zero
-	url = https://github.com/ai-computing/etri-zero
